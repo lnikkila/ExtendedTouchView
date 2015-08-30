@@ -1,0 +1,14 @@
+machine:
+  environment:
+    ADB_INSTALL_TIMEOUT: 10
+test:
+  override:
+    - emulator -avd circleci-android22 -no-audio -no-window:
+        background: true
+        parallel: true
+    - circle-android wait-for-boot
+    - sleep 30
+    - adb shell input keyevent 82
+    - ./gradlew cC -PdisablePreDex
+    - cp -r ./{library,sample}/build/outputs $CIRCLE_ARTIFACTS
+    - cp -r ./{library,sample}/build/outputs/androidTest-results/* $CIRCLE_TEST_REPORTS

@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 22
+
+        applicationId 'com.lnikkila.extendedtouchview.sample'
+        versionName '0.1.0'
+        versionCode 1
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':library')
+
+    compile 'com.android.support:appcompat-v7:22.2.1'
+
+    androidTestCompile 'com.android.support.test:runner:0.3'
+    androidTestCompile 'com.android.support.test:rules:0.3'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
+    androidTestCompile 'com.squareup.assertj:assertj-android:1.0.0'
+}
+
+configurations.all {
+    resolutionStrategy.force 'com.android.support:support-annotations:22.2.1'
+}

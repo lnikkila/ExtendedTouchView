@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 22
+
+        versionCode 1
+        versionName '0.1.0'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+publish {
+    userOrg = 'lnikkila'
+    groupId = 'com.lnikkila'
+    artifactId = 'extendedtouchview'
+    version = '0.1.0'
+    licences = ['ISC']
+    uploadName = 'ExtendedTouchView'
+    desc = 'Android library for manipulating view touch targets using XML only.'
+    website = 'https://github.com/lnikkila/ExtendedTouchView'
+}

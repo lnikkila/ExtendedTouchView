@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ExtendedTouchView">
+        <attr name="touchWidth" format="dimension" />
+        <attr name="touchHeight" format="dimension" />
+    </declare-styleable>
+
+</resources>
