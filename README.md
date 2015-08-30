@@ -29,6 +29,16 @@ this:
 
 And that’s it!
 
+### Installation
+
+You can get the compiled library on [JCenter][2].
+
+Throw this in your `build.gradle`:
+
+```
+compile 'com.lnikkila:extendedtouchview:0.1.0'
+```
+
 ### Licensing
 
 ```
@@ -50,3 +60,4 @@ THIS SOFTWARE.
 ```
 
 [1]: https://lnikki.la/articles/android-extended-touch-view/
+[2]: https://bintray.com/lnikkila/maven/ExtendedTouchView/view
