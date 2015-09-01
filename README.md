@@ -1,12 +1,16 @@
 ExtendedTouchView
 =================
 
+> Want some background? [Check out this blog post.][1]
+
+<img src="https://i.imgur.com/KFJzubE.gif" width="30%" align="right" hspace="24">
+
 Have you noticed that the Material guidelines specify that touch targets should
 sometimes be larger than the actual views?
 
 Check out this dialog’s buttons, for example:
 
-![Touch targets in a Material dialog](https://i.imgur.com/pmKWxLU.png)
+<img src="https://i.imgur.com/pmKWxLU.png" width="50%">
 
 Since `TouchDelegate` [is a bit clunky to use][1], `ExtendedTouchView` abstracts
 it away and you can use plain ol’ XML to set those targets to any size, like
@@ -35,7 +39,7 @@ You can get the compiled library on [JCenter][2].
 
 Throw this in your `build.gradle`:
 
-```
+```groovy
 compile 'com.lnikkila:extendedtouchview:0.1.0'
 ```
 
